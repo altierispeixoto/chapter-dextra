@@ -1,0 +1,25 @@
+version: '2.1'
+services:
+    neo4j:
+        image: neo4j:3.5.6
+        restart: always
+        ports:
+          - 7474:7474
+          - 7687:7687
+        volumes:
+          - ./data:/data
+          - ./logs:/logs
+          - ./plugins:/plugins
+          - ./import:/import
+        environment:
+            NEO4J_dbms_security_procedures_unrestricted: algo.*, apoc.*
+            NEO4J_apoc_import_file_enabled: "true"
+
+    jupyterlab:
+        image: jupyter/datascience-notebook
+        ports:
+          - "8888:8888"
+        volumes:
+          - ./notebooks:/home/jovyan/work/
+        environment: 
+            JUPYTER_ENABLE_LAB: "yes"
