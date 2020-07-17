@@ -4681,3 +4681,706 @@ MATCH ()-[]->() RETURN { name:'relationships', data: count(*)} AS result
 2020-07-17 02:04:40.978+0000 INFO [o.n.k.i.p.Procedures] [qtp438855621-359] EXPORT 0%
 2020-07-17 02:07:03.910+0000 INFO [o.n.k.i.p.Procedures] PageRank: overall memory usage: 24 MiB
 2020-07-17 02:07:03.911+0000 INFO [o.n.k.i.p.Procedures] [qtp438855621-398] EXPORT 0%
+2020-07-17 11:18:19.117+0000 INFO [o.n.g.f.m.e.CommunityEditionModule] No locking implementation specified, defaulting to 'community'
+2020-07-17 11:18:19.307+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Creating 'graph.db' database.
+2020-07-17 11:18:19.341+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Requirement `Database available` makes database graph.db unavailable.
+2020-07-17 11:18:19.342+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Database graph.db is unavailable.
+2020-07-17 11:18:19.383+0000 INFO [o.n.i.d.DiagnosticsManager] --- INITIALIZED diagnostics START ---
+2020-07-17 11:18:19.383+0000 INFO [o.n.i.d.DiagnosticsManager] Neo4j Kernel properties:
+2020-07-17 11:18:19.383+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.http.enabled=true
+2020-07-17 11:18:19.384+0000 INFO [o.n.i.d.DiagnosticsManager] causal_clustering.discovery_listen_address=0.0.0.0:5000
+2020-07-17 11:18:19.384+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.security.auth_enabled=true
+2020-07-17 11:18:19.384+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.http.listen_address=0.0.0.0:7474
+2020-07-17 11:18:19.384+0000 INFO [o.n.i.d.DiagnosticsManager] unsupported.dbms.directories.neo4j_home=/var/lib/neo4j
+2020-07-17 11:18:19.384+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.directories.import=/import
+2020-07-17 11:18:19.384+0000 INFO [o.n.i.d.DiagnosticsManager] causal_clustering.raft_advertised_address=e3df226e8afd:7000
+2020-07-17 11:18:19.384+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.memory.heap.initial_size=512M
+2020-07-17 11:18:19.384+0000 INFO [o.n.i.d.DiagnosticsManager] causal_clustering.raft_listen_address=0.0.0.0:7000
+2020-07-17 11:18:19.385+0000 INFO [o.n.i.d.DiagnosticsManager] ha.host.coordination=e3df226e8afd:5001
+2020-07-17 11:18:19.385+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.https.enabled=true
+2020-07-17 11:18:19.385+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.jvm.additional=-XX:+UseG1GC
+2020-07-17 11:18:19.385+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.tx_log.rotation.retention_policy=100M size
+2020-07-17 11:18:19.385+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.memory.heap.max_size=512M
+2020-07-17 11:18:19.385+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connectors.default_listen_address=0.0.0.0
+2020-07-17 11:18:19.385+0000 INFO [o.n.i.d.DiagnosticsManager] EDITION=community
+2020-07-17 11:18:19.385+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.security.procedures.unrestricted=algo.*, apoc.*
+2020-07-17 11:18:19.385+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.windows_service_name=neo4j
+2020-07-17 11:18:19.386+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.https.listen_address=0.0.0.0:7473
+2020-07-17 11:18:19.386+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.bolt.listen_address=0.0.0.0:7687
+2020-07-17 11:18:19.386+0000 INFO [o.n.i.d.DiagnosticsManager] apoc.import.file.enabled=true
+2020-07-17 11:18:19.386+0000 INFO [o.n.i.d.DiagnosticsManager] causal_clustering.transaction_advertised_address=e3df226e8afd:6000
+2020-07-17 11:18:19.386+0000 INFO [o.n.i.d.DiagnosticsManager] causal_clustering.discovery_advertised_address=e3df226e8afd:5000
+2020-07-17 11:18:19.386+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.memory.pagecache.size=512M
+2020-07-17 11:18:19.386+0000 INFO [o.n.i.d.DiagnosticsManager] ha.host.data=e3df226e8afd:6001
+2020-07-17 11:18:19.386+0000 INFO [o.n.i.d.DiagnosticsManager] unsupported.dbms.edition=community
+2020-07-17 11:18:19.387+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.directories.logs=/logs
+2020-07-17 11:18:19.387+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.bolt.enabled=true
+2020-07-17 11:18:19.387+0000 INFO [o.n.i.d.DiagnosticsManager] causal_clustering.transaction_listen_address=0.0.0.0:6000
+2020-07-17 11:18:19.387+0000 INFO [o.n.i.d.DiagnosticsManager] wrapper.java.additional=-Dneo4j.ext.udc.source=docker
+2020-07-17 11:18:19.387+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.directories.plugins=/plugins
+2020-07-17 11:18:19.387+0000 INFO [o.n.i.d.DiagnosticsManager] HOME=/var/lib/neo4j
+2020-07-17 11:18:19.387+0000 INFO [o.n.i.d.DiagnosticsManager] Diagnostics providers:
+2020-07-17 11:18:19.387+0000 INFO [o.n.i.d.DiagnosticsManager] org.neo4j.kernel.configuration.Config
+2020-07-17 11:18:19.387+0000 INFO [o.n.i.d.DiagnosticsManager] org.neo4j.internal.diagnostics.DiagnosticsManager
+2020-07-17 11:18:19.387+0000 INFO [o.n.i.d.DiagnosticsManager] SYSTEM_MEMORY
+2020-07-17 11:18:19.388+0000 INFO [o.n.i.d.DiagnosticsManager] JAVA_MEMORY
+2020-07-17 11:18:19.388+0000 INFO [o.n.i.d.DiagnosticsManager] OPERATING_SYSTEM
+2020-07-17 11:18:19.388+0000 INFO [o.n.i.d.DiagnosticsManager] JAVA_VIRTUAL_MACHINE
+2020-07-17 11:18:19.388+0000 INFO [o.n.i.d.DiagnosticsManager] CLASSPATH
+2020-07-17 11:18:19.388+0000 INFO [o.n.i.d.DiagnosticsManager] LIBRARY_PATH
+2020-07-17 11:18:19.388+0000 INFO [o.n.i.d.DiagnosticsManager] SYSTEM_PROPERTIES
+2020-07-17 11:18:19.388+0000 INFO [o.n.i.d.DiagnosticsManager] TIMEZONE_DATABASE
+2020-07-17 11:18:19.388+0000 INFO [o.n.i.d.DiagnosticsManager] LINUX_SCHEDULERS
+2020-07-17 11:18:19.388+0000 INFO [o.n.i.d.DiagnosticsManager] NETWORK
+2020-07-17 11:18:19.388+0000 INFO [o.n.i.d.DiagnosticsManager] System memory information:
+2020-07-17 11:18:19.396+0000 INFO [o.n.i.d.DiagnosticsManager] Total Physical memory: 11.48 GB
+2020-07-17 11:18:19.397+0000 INFO [o.n.i.d.DiagnosticsManager] Free Physical memory: 160.29 MB
+2020-07-17 11:18:19.397+0000 INFO [o.n.i.d.DiagnosticsManager] Committed virtual memory: 3.97 GB
+2020-07-17 11:18:19.397+0000 INFO [o.n.i.d.DiagnosticsManager] Total swap space: 16.76 GB
+2020-07-17 11:18:19.397+0000 INFO [o.n.i.d.DiagnosticsManager] Free swap space: 16.59 GB
+2020-07-17 11:18:19.397+0000 INFO [o.n.i.d.DiagnosticsManager] JVM memory information:
+2020-07-17 11:18:19.397+0000 INFO [o.n.i.d.DiagnosticsManager] Free  memory: 490.46 MB
+2020-07-17 11:18:19.397+0000 INFO [o.n.i.d.DiagnosticsManager] Total memory: 512.00 MB
+2020-07-17 11:18:19.397+0000 INFO [o.n.i.d.DiagnosticsManager] Max   memory: 512.00 MB
+2020-07-17 11:18:19.400+0000 INFO [o.n.i.d.DiagnosticsManager] Garbage Collector: G1 Young Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2020-07-17 11:18:19.400+0000 INFO [o.n.i.d.DiagnosticsManager] Garbage Collector: G1 Old Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2020-07-17 11:18:19.401+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: Code Cache (Non-heap memory): committed=6.44 MB, used=6.40 MB, max=240.00 MB, threshold=0.00 B
+2020-07-17 11:18:19.401+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: Metaspace (Non-heap memory): committed=21.13 MB, used=20.25 MB, max=-1.00 B, threshold=0.00 B
+2020-07-17 11:18:19.401+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: Compressed Class Space (Non-heap memory): committed=2.63 MB, used=2.35 MB, max=1.00 GB, threshold=0.00 B
+2020-07-17 11:18:19.402+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Eden Space (Heap memory): committed=297.00 MB, used=2.00 MB, max=-1.00 B, threshold=?
+2020-07-17 11:18:19.402+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Survivor Space (Heap memory): committed=14.00 MB, used=14.00 MB, max=-1.00 B, threshold=?
+2020-07-17 11:18:19.402+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Old Gen (Heap memory): committed=201.00 MB, used=4.54 MB, max=512.00 MB, threshold=0.00 B
+2020-07-17 11:18:19.402+0000 INFO [o.n.i.d.DiagnosticsManager] Operating system information:
+2020-07-17 11:18:19.402+0000 INFO [o.n.i.d.DiagnosticsManager] Operating System: Linux; version: 5.4.0-40-generic; arch: amd64; cpus: 8
+2020-07-17 11:18:19.402+0000 INFO [o.n.i.d.DiagnosticsManager] Max number of file descriptors: 1048576
+2020-07-17 11:18:19.403+0000 INFO [o.n.i.d.DiagnosticsManager] Number of open file descriptors: 135
+2020-07-17 11:18:19.404+0000 INFO [o.n.i.d.DiagnosticsManager] Process id: 7@e3df226e8afd
+2020-07-17 11:18:19.404+0000 INFO [o.n.i.d.DiagnosticsManager] Byte order: LITTLE_ENDIAN
+2020-07-17 11:18:19.406+0000 INFO [o.n.i.d.DiagnosticsManager] Local timezone: Etc/UTC
+2020-07-17 11:18:19.407+0000 INFO [o.n.i.d.DiagnosticsManager] JVM information:
+2020-07-17 11:18:19.407+0000 INFO [o.n.i.d.DiagnosticsManager] VM Name: OpenJDK 64-Bit Server VM
+2020-07-17 11:18:19.407+0000 INFO [o.n.i.d.DiagnosticsManager] VM Vendor: Oracle Corporation
+2020-07-17 11:18:19.407+0000 INFO [o.n.i.d.DiagnosticsManager] VM Version: 25.262-b10
+2020-07-17 11:18:19.407+0000 INFO [o.n.i.d.DiagnosticsManager] JIT compiler: HotSpot 64-Bit Tiered Compilers
+2020-07-17 11:18:19.407+0000 INFO [o.n.i.d.DiagnosticsManager] VM Arguments: [-Xms512M, -Xmx512M, -XX:+UseG1GC, -XX:-OmitStackTraceInFastThrow, -XX:+AlwaysPreTouch, -XX:+UnlockExperimentalVMOptions, -XX:+TrustFinalNonStaticFields, -XX:+DisableExplicitGC, -Djdk.tls.ephemeralDHKeySize=2048, -Djdk.tls.rejectClientInitiatedRenegotiation=true, -Dunsupported.dbms.udc.source=tarball, -Dfile.encoding=UTF-8]
+2020-07-17 11:18:19.408+0000 INFO [o.n.i.d.DiagnosticsManager] Java classpath:
+2020-07-17 11:18:19.409+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-logical-plans-3.5-3.5.6.jar
+2020-07-17 11:18:19.409+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jackson-core-asl-1.9.13.jar
+2020-07-17 11:18:19.409+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-consistency-check-3.5.6.jar
+2020-07-17 11:18:19.409+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jetty-http-9.4.17.v20190418.jar
+2020-07-17 11:18:19.409+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/local/openjdk-8/lib/ext/zipfs.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/concurrentlinkedhashmap-lru-1.4.2.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-csv-3.5.6.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-configuration-3.5.6.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jPowerShell-1.9.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/server-api-3.5.6.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/local/openjdk-8/lib/ext/sunec.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-util-3.4-3.4.13.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-runtime-util-3.5.6.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-kernel-api-3.5.6.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/local/openjdk-8/lib/ext/sunjce_provider.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-graphdb-api-3.5.6.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jetty-io-9.4.17.v20190418.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-codegen-3.5.6.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jaxb-runtime-2.3.0.1.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jersey-server-1.19.3.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-lucene-index-3.5.6.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-procedure-api-3.5.6.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-expression-evaluator-3.5.6.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-spatial-index-3.5.6.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-resource-3.5.6.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-ir-3.4-3.4.13.jar
+2020-07-17 11:18:19.410+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-rewriting-3.5-3.5.6.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/commons-io-2.6.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/local/openjdk-8/lib/ext/dnsns.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jersey-core-1.19.3.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jetty-xml-9.4.17.v20190418.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jetty-webapp-9.4.17.v20190418.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/commons-configuration-1.10.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/local/openjdk-8/lib/ext/cldrdata.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/local/openjdk-8/lib/charsets.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-io-3.5.6.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-3.5.6.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-expression-3.4-3.4.13.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jersey-servlet-1.19.3.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-diagnostics-3.5.6.jar
+2020-07-17 11:18:19.411+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-collections-3.5.6.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/local/openjdk-8/lib/resources.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/zstd-proxy-3.5.6.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-server-3.5.6.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-data-collector-3.5.6.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/scala-library-2.11.12.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/local/openjdk-8/lib/jsse.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-browser-3.2.20.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/local/openjdk-8/lib/ext/localedata.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jetty-server-9.4.17.v20190418.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jaxb-core-2.3.0.1.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/javax.servlet-api-3.1.0.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/local/openjdk-8/lib/sunrsasign.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-planner-3.4-3.4.13.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-3.5.6.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jProcesses-1.6.4.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-compiler-2.3-2.3.12.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/local/openjdk-8/lib/ext/sunpkcs11.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/scala-reflect-2.11.12.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/commons-lang-2.6.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/lucene-core-5.5.5.jar
+2020-07-17 11:18:19.412+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-ir-3.5-3.5.6.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/commons-compress-1.18.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/lucene-codecs-5.5.5.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/local/openjdk-8/lib/rt.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/activation-1.1.1.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-compiler-3.1-3.1.9.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/eclipse-collections-9.2.0.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-planner-spi-3.5-3.5.6.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/plugins/graph-algorithms-algo-3.5.4.0.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/commons-lang3-3.8.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-index-3.5.6.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/FastInfoset-1.2.13.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-concurrent-3.5.6.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/conf/
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-front-end-3.5-3.5.6.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-planner-3.5-3.5.6.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jetty-util-9.4.17.v20190418.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jaxb-api-2.3.0.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/netty-all-4.1.32.Final.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/opencsv-2.3.jar
+2020-07-17 11:18:19.413+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-udc-3.5.6.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/parboiled-scala_2.11-1.1.7.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-jmx-3.5.6.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-parser-3.5-3.5.6.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-logging-3.5.6.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/txw2-2.3.0.1.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/local/openjdk-8/classes
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jetty-servlet-9.4.17.v20190418.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/eclipse-collections-api-9.2.0.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-interpreted-runtime-3.5.6.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/openCypher-frontend-1-3.4.13.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jackson-mapper-asl-1.9.13.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-annotation-processors-3.5.6.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/stax-ex-1.7.8.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-command-line-3.5.6.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/local/openjdk-8/lib/jfr.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/caffeine-2.6.2.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/lucene-queryparser-5.5.5.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/bcprov-jdk15on-1.60.jar
+2020-07-17 11:18:19.414+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-graph-algo-3.5.6.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jackson-jaxrs-1.9.13.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/local/openjdk-8/lib/ext/nashorn.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-kernel-3.5.6.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/local/openjdk-8/lib/jce.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-frontend-3.1-3.1.9.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/WMI4Java-1.6.1.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-expressions-3.5-3.5.6.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-unsafe-3.5.6.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-dbms-3.5.6.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/istack-commons-runtime-3.0.5.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jsr311-api-1.1.2.r612.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-fulltext-index-3.5.6.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-frontend-2.3-2.3.12.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-legacy-3.5.6.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/plugins/
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/lucene-analyzers-common-5.5.5.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-values-3.5.6.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-ast-3.5-3.5.6.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/bcpkix-jdk15on-1.60.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/zstd-jni-1.3.8-6.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-import-tool-3.5.6.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-bolt-3.5.6.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-ssl-3.5.6.jar
+2020-07-17 11:18:19.415+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-util-3.5-3.5.6.jar
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-security-3.5.6.jar
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-planner-spi-3.4-3.4.13.jar
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-lucene-upgrade-3.5.6.jar
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/commons-logging-1.1.1.jar
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/commons-text-1.4.jar
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/plugins/apoc-3.5.0.3-all.jar
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/local/openjdk-8/lib/ext/jaccess.jar
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-graph-matching-3.1.9.jar
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/parboiled-core-1.1.7.jar
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-cypher-logical-plans-3.4-3.4.13.jar
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/neo4j-common-3.5.6.jar
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/var/lib/neo4j/lib/jetty-security-9.4.17.v20190418.jar
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager] Library path:
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/java/packages/lib/amd64
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib64
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager] /lib64
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager] /lib
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib
+2020-07-17 11:18:19.416+0000 INFO [o.n.i.d.DiagnosticsManager] System.properties:
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] sun.boot.library.path = /usr/local/openjdk-8/lib/amd64
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] jdk.tls.rejectClientInitiatedRenegotiation = true
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] path.separator = :
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] file.encoding.pkg = sun.io
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] sun.java.launcher = SUN_STANDARD
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] sun.os.patch.level = unknown
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] user.dir = /var/lib/neo4j
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] sun.jnu.encoding = UTF-8
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] unsupported.dbms.udc.source = tarball
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] user.home = /var/lib/neo4j
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] user.timezone = Etc/UTC
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] file.encoding = UTF-8
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] user.name = neo4j
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] sun.java.command = org.neo4j.server.CommunityEntryPoint --home-dir=/var/lib/neo4j --config-dir=/var/lib/neo4j/conf
+2020-07-17 11:18:19.417+0000 INFO [o.n.i.d.DiagnosticsManager] sun.arch.data.model = 64
+2020-07-17 11:18:19.418+0000 INFO [o.n.i.d.DiagnosticsManager] user.language = en
+2020-07-17 11:18:19.418+0000 INFO [o.n.i.d.DiagnosticsManager] awt.toolkit = sun.awt.X11.XToolkit
+2020-07-17 11:18:19.418+0000 INFO [o.n.i.d.DiagnosticsManager] jdk.tls.ephemeralDHKeySize = 2048
+2020-07-17 11:18:19.418+0000 INFO [o.n.i.d.DiagnosticsManager] file.separator = /
+2020-07-17 11:18:19.418+0000 INFO [o.n.i.d.DiagnosticsManager] sun.io.unicode.encoding = UnicodeLittle
+2020-07-17 11:18:19.418+0000 INFO [o.n.i.d.DiagnosticsManager] sun.cpu.endian = little
+2020-07-17 11:18:19.418+0000 INFO [o.n.i.d.DiagnosticsManager] sun.cpu.isalist = 
+2020-07-17 11:18:19.418+0000 INFO [o.n.i.d.DiagnosticsManager] (IANA) TimeZone Database Version:
+2020-07-17 11:18:19.446+0000 INFO [o.n.i.d.DiagnosticsManager]   TimeZone version: 2020a (available for 601 zone identifiers)
+2020-07-17 11:18:19.446+0000 INFO [o.n.i.d.DiagnosticsManager] Linux scheduler information:
+2020-07-17 11:18:19.453+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.453+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.453+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.453+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.454+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.454+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.454+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.454+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.454+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.454+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.455+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.455+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.455+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.455+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.455+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.455+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.456+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.456+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.456+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.456+0000 INFO [o.n.i.d.DiagnosticsManager] [mq-deadline] none
+2020-07-17 11:18:19.456+0000 INFO [o.n.i.d.DiagnosticsManager] Network information:
+2020-07-17 11:18:19.457+0000 INFO [o.n.i.d.DiagnosticsManager] Interface eth0:
+2020-07-17 11:18:19.457+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 172.19.0.3
+2020-07-17 11:18:19.457+0000 INFO [o.n.i.d.DiagnosticsManager] Interface lo:
+2020-07-17 11:18:19.457+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 127.0.0.1
+2020-07-17 11:18:19.457+0000 INFO [o.n.i.d.DiagnosticsManager] --- INITIALIZED diagnostics END ---
+2020-07-17 11:18:19.872+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store /data/databases/graph.db
+2020-07-17 11:18:19.895+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store /data/databases/graph.db
+2020-07-17 11:18:19.895+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Format not configured. Selected format from the store: RecordFormat:StandardV3_4[v0.A.9]
+2020-07-17 11:18:20.509+0000 INFO [o.n.k.i.i.l.NativeLabelScanStore] Label index cleanup job registered
+2020-07-17 11:18:20.515+0000 INFO [o.n.k.NeoStoreDataSource] Commits found after last check point (which is at LogPosition{logVersion=0, byteOffset=5319066}). First txId after last checkpoint: 39 
+2020-07-17 11:18:20.515+0000 INFO [o.n.k.NeoStoreDataSource] Recovery required from position LogPosition{logVersion=0, byteOffset=5319066}
+2020-07-17 11:18:20.543+0000 INFO [o.n.k.r.Recovery]   10% completed
+2020-07-17 11:18:20.556+0000 INFO [o.n.k.r.Recovery]   20% completed
+2020-07-17 11:18:20.556+0000 INFO [o.n.k.r.Recovery]   30% completed
+2020-07-17 11:18:20.562+0000 INFO [o.n.k.r.Recovery]   40% completed
+2020-07-17 11:18:20.562+0000 INFO [o.n.k.r.Recovery]   50% completed
+2020-07-17 11:18:20.608+0000 INFO [o.n.k.i.i.s.GenericNativeIndexProvider] Schema index cleanup job registered: descriptor=IndexRule[id=1, descriptor=Index( UNIQUE, :label[0](property[0]) ), provider={key=native-btree, version=1.0}, owner=4], indexFile=/data/databases/graph.db/schema/index/native-btree-1.0/1/index-1
+2020-07-17 11:18:20.613+0000 INFO [o.n.k.i.a.i.IndexingService] IndexingService.init: indexes not specifically mentioned above are ONLINE
+2020-07-17 11:18:20.619+0000 INFO [o.n.k.r.Recovery]   60% completed
+2020-07-17 11:18:20.661+0000 INFO [o.n.k.r.Recovery]   70% completed
+2020-07-17 11:18:20.662+0000 INFO [o.n.k.r.Recovery]   80% completed
+2020-07-17 11:18:20.667+0000 INFO [o.n.k.r.Recovery]   90% completed
+2020-07-17 11:18:20.667+0000 INFO [o.n.k.r.Recovery]   100% completed
+2020-07-17 11:18:20.667+0000 INFO [o.n.k.NeoStoreDataSource] Recovery completed. 3 transactions, first:39, last:41 recovered
+2020-07-17 11:18:20.726+0000 INFO [o.n.k.i.s.DynamicArrayStore] Rebuilding id generator for[/data/databases/graph.db/neostore.nodestore.db.labels] ...
+2020-07-17 11:18:20.727+0000 INFO [o.n.k.i.i.l.NativeLabelScanStore] Label index cleanup job started
+2020-07-17 11:18:20.731+0000 INFO [o.n.k.i.i.l.NativeLabelScanStore] Label index cleanup job finished: Number of pages visited: 3, Number of cleaned crashed pointers: 0, Time spent: 3ms
+2020-07-17 11:18:20.731+0000 INFO [o.n.k.i.i.l.NativeLabelScanStore] Label index cleanup job closed
+2020-07-17 11:18:20.731+0000 INFO [o.n.k.i.i.s.GenericNativeIndexProvider] Schema index cleanup job started: descriptor=IndexRule[id=1, descriptor=Index( UNIQUE, :label[0](property[0]) ), provider={key=native-btree, version=1.0}, owner=4], indexFile=/data/databases/graph.db/schema/index/native-btree-1.0/1/index-1
+2020-07-17 11:18:20.753+0000 INFO [o.n.k.i.i.s.GenericNativeIndexProvider] Schema index cleanup job finished: descriptor=IndexRule[id=1, descriptor=Index( UNIQUE, :label[0](property[0]) ), provider={key=native-btree, version=1.0}, owner=4], indexFile=/data/databases/graph.db/schema/index/native-btree-1.0/1/index-1 Number of pages visited: 15, Number of cleaned crashed pointers: 0, Time spent: 22ms
+2020-07-17 11:18:20.753+0000 INFO [o.n.k.i.i.s.GenericNativeIndexProvider] Schema index cleanup job closed: descriptor=IndexRule[id=1, descriptor=Index( UNIQUE, :label[0](property[0]) ), provider={key=native-btree, version=1.0}, owner=4], indexFile=/data/databases/graph.db/schema/index/native-btree-1.0/1/index-1
+2020-07-17 11:18:20.816+0000 INFO [o.n.k.i.s.DynamicArrayStore] [/data/databases/graph.db/neostore.nodestore.db.labels] high id=1 (defragged=0)
+2020-07-17 11:18:20.816+0000 INFO [o.n.k.i.s.DynamicArrayStore] /data/databases/graph.db/neostore.nodestore.db.labels rebuild id generator, highId=1 defragged count=0
+2020-07-17 11:18:20.817+0000 INFO [o.n.k.i.s.NodeStore] Rebuilding id generator for[/data/databases/graph.db/neostore.nodestore.db] ...
+2020-07-17 11:18:20.896+0000 INFO [o.n.k.i.s.NodeStore] [/data/databases/graph.db/neostore.nodestore.db] high id=899 (defragged=0)
+2020-07-17 11:18:20.897+0000 INFO [o.n.k.i.s.NodeStore] /data/databases/graph.db/neostore.nodestore.db rebuild id generator, highId=899 defragged count=0
+2020-07-17 11:18:20.897+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/data/databases/graph.db/neostore.propertystore.db.index.keys] ...
+2020-07-17 11:18:20.952+0000 INFO [o.n.k.i.s.DynamicStringStore] [/data/databases/graph.db/neostore.propertystore.db.index.keys] high id=10 (defragged=0)
+2020-07-17 11:18:20.953+0000 INFO [o.n.k.i.s.DynamicStringStore] /data/databases/graph.db/neostore.propertystore.db.index.keys rebuild id generator, highId=10 defragged count=0
+2020-07-17 11:18:20.953+0000 INFO [o.n.k.i.s.PropertyKeyTokenStore] Rebuilding id generator for[/data/databases/graph.db/neostore.propertystore.db.index] ...
+2020-07-17 11:18:21.008+0000 INFO [o.n.k.i.s.PropertyKeyTokenStore] [/data/databases/graph.db/neostore.propertystore.db.index] high id=9 (defragged=0)
+2020-07-17 11:18:21.008+0000 INFO [o.n.k.i.s.PropertyKeyTokenStore] /data/databases/graph.db/neostore.propertystore.db.index rebuild id generator, highId=9 defragged count=0
+2020-07-17 11:18:21.090+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/data/databases/graph.db/neostore.propertystore.db.strings] ...
+2020-07-17 11:18:21.174+0000 INFO [o.n.k.i.s.DynamicStringStore] [/data/databases/graph.db/neostore.propertystore.db.strings] high id=170 (defragged=0)
+2020-07-17 11:18:21.174+0000 INFO [o.n.k.i.s.DynamicStringStore] /data/databases/graph.db/neostore.propertystore.db.strings rebuild id generator, highId=170 defragged count=0
+2020-07-17 11:18:21.175+0000 INFO [o.n.k.i.s.DynamicArrayStore] Rebuilding id generator for[/data/databases/graph.db/neostore.propertystore.db.arrays] ...
+2020-07-17 11:18:21.241+0000 INFO [o.n.k.i.s.DynamicArrayStore] [/data/databases/graph.db/neostore.propertystore.db.arrays] high id=1 (defragged=0)
+2020-07-17 11:18:21.241+0000 INFO [o.n.k.i.s.DynamicArrayStore] /data/databases/graph.db/neostore.propertystore.db.arrays rebuild id generator, highId=1 defragged count=0
+2020-07-17 11:18:21.241+0000 INFO [o.n.k.i.s.PropertyStore] Rebuilding id generator for[/data/databases/graph.db/neostore.propertystore.db] ...
+2020-07-17 11:18:21.305+0000 INFO [o.n.k.i.s.PropertyStore] [/data/databases/graph.db/neostore.propertystore.db] high id=6422 (defragged=0)
+2020-07-17 11:18:21.306+0000 INFO [o.n.k.i.s.PropertyStore] /data/databases/graph.db/neostore.propertystore.db rebuild id generator, highId=6422 defragged count=0
+2020-07-17 11:18:21.306+0000 INFO [o.n.k.i.s.RelationshipStore] Rebuilding id generator for[/data/databases/graph.db/neostore.relationshipstore.db] ...
+2020-07-17 11:18:21.389+0000 INFO [o.n.k.i.s.RelationshipStore] [/data/databases/graph.db/neostore.relationshipstore.db] high id=10037 (defragged=0)
+2020-07-17 11:18:21.390+0000 INFO [o.n.k.i.s.RelationshipStore] /data/databases/graph.db/neostore.relationshipstore.db rebuild id generator, highId=10037 defragged count=0
+2020-07-17 11:18:21.390+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/data/databases/graph.db/neostore.relationshiptypestore.db.names] ...
+2020-07-17 11:18:21.452+0000 INFO [o.n.k.i.s.DynamicStringStore] [/data/databases/graph.db/neostore.relationshiptypestore.db.names] high id=5 (defragged=0)
+2020-07-17 11:18:21.452+0000 INFO [o.n.k.i.s.DynamicStringStore] /data/databases/graph.db/neostore.relationshiptypestore.db.names rebuild id generator, highId=5 defragged count=0
+2020-07-17 11:18:21.453+0000 INFO [o.n.k.i.s.RelationshipTypeTokenStore] Rebuilding id generator for[/data/databases/graph.db/neostore.relationshiptypestore.db] ...
+2020-07-17 11:18:21.508+0000 INFO [o.n.k.i.s.RelationshipTypeTokenStore] [/data/databases/graph.db/neostore.relationshiptypestore.db] high id=4 (defragged=0)
+2020-07-17 11:18:21.508+0000 INFO [o.n.k.i.s.RelationshipTypeTokenStore] /data/databases/graph.db/neostore.relationshiptypestore.db rebuild id generator, highId=4 defragged count=0
+2020-07-17 11:18:21.530+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/data/databases/graph.db/neostore.labeltokenstore.db.names] ...
+2020-07-17 11:18:21.586+0000 INFO [o.n.k.i.s.DynamicStringStore] [/data/databases/graph.db/neostore.labeltokenstore.db.names] high id=2 (defragged=0)
+2020-07-17 11:18:21.586+0000 INFO [o.n.k.i.s.DynamicStringStore] /data/databases/graph.db/neostore.labeltokenstore.db.names rebuild id generator, highId=2 defragged count=0
+2020-07-17 11:18:21.586+0000 INFO [o.n.k.i.s.LabelTokenStore] Rebuilding id generator for[/data/databases/graph.db/neostore.labeltokenstore.db] ...
+2020-07-17 11:18:21.645+0000 INFO [o.n.k.i.s.LabelTokenStore] [/data/databases/graph.db/neostore.labeltokenstore.db] high id=1 (defragged=0)
+2020-07-17 11:18:21.645+0000 INFO [o.n.k.i.s.LabelTokenStore] /data/databases/graph.db/neostore.labeltokenstore.db rebuild id generator, highId=1 defragged count=0
+2020-07-17 11:18:21.667+0000 INFO [o.n.k.i.s.SchemaStore] Rebuilding id generator for[/data/databases/graph.db/neostore.schemastore.db] ...
+2020-07-17 11:18:21.722+0000 INFO [o.n.k.i.s.SchemaStore] [/data/databases/graph.db/neostore.schemastore.db] high id=8 (defragged=0)
+2020-07-17 11:18:21.722+0000 INFO [o.n.k.i.s.SchemaStore] /data/databases/graph.db/neostore.schemastore.db rebuild id generator, highId=8 defragged count=0
+2020-07-17 11:18:21.723+0000 INFO [o.n.k.i.s.RelationshipGroupStore] Rebuilding id generator for[/data/databases/graph.db/neostore.relationshipgroupstore.db] ...
+2020-07-17 11:18:21.778+0000 INFO [o.n.k.i.s.RelationshipGroupStore] [/data/databases/graph.db/neostore.relationshipgroupstore.db] high id=162 (defragged=0)
+2020-07-17 11:18:21.778+0000 INFO [o.n.k.i.s.RelationshipGroupStore] /data/databases/graph.db/neostore.relationshipgroupstore.db rebuild id generator, highId=162 defragged count=0
+2020-07-17 11:18:21.779+0000 INFO [o.n.k.i.s.MetaDataStore] Rebuilding id generator for[/data/databases/graph.db/neostore] ...
+2020-07-17 11:18:21.823+0000 INFO [o.n.k.i.s.MetaDataStore] [/data/databases/graph.db/neostore] high id=15 (defragged=0)
+2020-07-17 11:18:21.823+0000 INFO [o.n.k.i.s.MetaDataStore] /data/databases/graph.db/neostore rebuild id generator, highId=15 defragged count=0
+2020-07-17 11:18:21.831+0000 INFO [o.n.k.i.a.i.IndexingService] IndexingService.start: indexes not specifically mentioned above are ONLINE
+2020-07-17 11:18:21.866+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2020-07-17 11:18:21.866+0000 INFO [o.n.i.d.DiagnosticsManager] Graph Database: community single StoreId{creationTime=1594942291842, randomId=8792019645988317226, storeVersion=16094931155187206, upgradeTime=1594942291842, upgradeId=1}
+2020-07-17 11:18:21.866+0000 INFO [o.n.i.d.DiagnosticsManager] Kernel version: 3.5.6,73866e84158298d5f4a7325b6466c0189ad21d11
+2020-07-17 11:18:21.866+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2020-07-17 11:18:21.869+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2020-07-17 11:18:21.869+0000 INFO [o.n.i.d.DiagnosticsManager] Store versions:
+2020-07-17 11:18:21.869+0000 INFO [o.n.i.d.DiagnosticsManager]   ArrayPropertyStore v0.A.9
+2020-07-17 11:18:21.869+0000 INFO [o.n.i.d.DiagnosticsManager]   NodeStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager]   PropertyIndexStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager]   ArrayPropertyStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager]   PropertyStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipTypeStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager]   LabelTokenStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager]   SchemaStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipGroupStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager]   NeoStore v0.A.9
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2020-07-17 11:18:21.870+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2020-07-17 11:18:21.871+0000 INFO [o.n.i.d.DiagnosticsManager] Id usage:
+2020-07-17 11:18:21.871+0000 INFO [o.n.i.d.DiagnosticsManager]   ArrayPropertyStore: used=1 high=0
+2020-07-17 11:18:21.871+0000 INFO [o.n.i.d.DiagnosticsManager]   NodeStore: used=899 high=898
+2020-07-17 11:18:21.871+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore: used=10 high=9
+2020-07-17 11:18:21.871+0000 INFO [o.n.i.d.DiagnosticsManager]   PropertyIndexStore: used=9 high=8
+2020-07-17 11:18:21.871+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore: used=170 high=169
+2020-07-17 11:18:21.871+0000 INFO [o.n.i.d.DiagnosticsManager]   ArrayPropertyStore: used=1 high=0
+2020-07-17 11:18:21.871+0000 INFO [o.n.i.d.DiagnosticsManager]   PropertyStore: used=6422 high=6421
+2020-07-17 11:18:21.871+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipStore: used=10037 high=10036
+2020-07-17 11:18:21.871+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore: used=5 high=4
+2020-07-17 11:18:21.871+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipTypeStore: used=4 high=3
+2020-07-17 11:18:21.872+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore: used=2 high=1
+2020-07-17 11:18:21.872+0000 INFO [o.n.i.d.DiagnosticsManager]   LabelTokenStore: used=1 high=0
+2020-07-17 11:18:21.872+0000 INFO [o.n.i.d.DiagnosticsManager]   SchemaStore: used=8 high=7
+2020-07-17 11:18:21.872+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipGroupStore: used=162 high=161
+2020-07-17 11:18:21.872+0000 INFO [o.n.i.d.DiagnosticsManager]   NeoStore: used=15 high=14
+2020-07-17 11:18:21.872+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2020-07-17 11:18:21.872+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_RECORDS START ---
+2020-07-17 11:18:21.872+0000 INFO [o.n.i.d.DiagnosticsManager] Neostore records:
+2020-07-17 11:18:21.873+0000 INFO [o.n.i.d.DiagnosticsManager] TIME (Creation time): 1594942291842
+2020-07-17 11:18:21.873+0000 INFO [o.n.i.d.DiagnosticsManager] RANDOM_NUMBER (Random number for store id): 8792019645988317226
+2020-07-17 11:18:21.873+0000 INFO [o.n.i.d.DiagnosticsManager] LOG_VERSION (Current log version): 0
+2020-07-17 11:18:21.873+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_ID (Last committed transaction): 41
+2020-07-17 11:18:21.873+0000 INFO [o.n.i.d.DiagnosticsManager] STORE_VERSION (Store format version): 16094931155187206
+2020-07-17 11:18:21.873+0000 INFO [o.n.i.d.DiagnosticsManager] FIRST_GRAPH_PROPERTY (First property record containing graph properties): -1
+2020-07-17 11:18:21.873+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CONSTRAINT_TRANSACTION (Last committed transaction containing constraint changes): 5
+2020-07-17 11:18:21.873+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_ID (Transaction id most recent upgrade was performed at): 1
+2020-07-17 11:18:21.873+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TIME (Time of last upgrade): 1594942291842
+2020-07-17 11:18:21.873+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_CHECKSUM (Checksum of last committed transaction): -161646746840
+2020-07-17 11:18:21.874+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_CHECKSUM (Checksum of transaction id the most recent upgrade was performed at): 0
+2020-07-17 11:18:21.874+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_VERSION (Log version where the last transaction commit entry has been written into): 0
+2020-07-17 11:18:21.874+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_BYTE_OFFSET (Byte offset in the log file where the last transaction commit entry has been written into): 5490260
+2020-07-17 11:18:21.874+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_COMMIT_TIMESTAMP (Commit time timestamp for last committed transaction): 1594951453425
+2020-07-17 11:18:21.874+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_COMMIT_TIMESTAMP (Commit timestamp of transaction the most recent upgrade was performed at): 0
+2020-07-17 11:18:21.874+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_RECORDS END ---
+2020-07-17 11:18:21.875+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for TRANSACTION_RANGE START ---
+2020-07-17 11:18:21.875+0000 INFO [o.n.i.d.DiagnosticsManager] Transaction log:
+2020-07-17 11:18:21.875+0000 INFO [o.n.i.d.DiagnosticsManager] Oldest transaction 2 found in log with version 0
+2020-07-17 11:18:21.875+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for TRANSACTION_RANGE END ---
+2020-07-17 11:18:21.879+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2020-07-17 11:18:21.880+0000 INFO [o.n.i.d.DiagnosticsManager] Disk space on partition (Total / Free / Free %): 983429038080 / 952482377728 / 96
+2020-07-17 11:18:21.880+0000 INFO [o.n.i.d.DiagnosticsManager] Storage files: (filename : modification date - size)
+2020-07-17 11:18:21.882+0000 INFO [o.n.i.d.DiagnosticsManager]   index:
+2020-07-17 11:18:21.883+0000 INFO [o.n.i.d.DiagnosticsManager]   - Total: 2020-07-17T11:18:20+0000 - 0.00 B
+2020-07-17 11:18:21.883+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore: 2020-07-17T11:06:23+0000 - 8.00 kB
+2020-07-17 11:18:21.883+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.counts.db.a: 2020-07-17T11:06:23+0000 - 704.00 B
+2020-07-17 11:18:21.883+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.counts.db.b: 2020-07-17T11:06:23+0000 - 704.00 B
+2020-07-17 11:18:21.883+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.id: 2020-07-17T11:18:21+0000 - 9.00 B
+2020-07-17 11:18:21.883+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labelscanstore.db: 2020-07-17T11:18:20+0000 - 48.00 kB
+2020-07-17 11:18:21.883+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db: 2020-07-17T11:06:23+0000 - 8.00 kB
+2020-07-17 11:18:21.884+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.id: 2020-07-17T11:18:21+0000 - 9.00 B
+2020-07-17 11:18:21.884+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.names: 2020-07-17T11:06:23+0000 - 8.00 kB
+2020-07-17 11:18:21.884+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.names.id: 2020-07-17T11:18:21+0000 - 9.00 B
+2020-07-17 11:18:21.884+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db: 2020-07-17T11:06:23+0000 - 16.00 kB
+2020-07-17 11:18:21.884+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.id: 2020-07-17T11:18:20+0000 - 9.00 B
+2020-07-17 11:18:21.884+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.labels: 2020-07-17T11:06:23+0000 - 8.00 kB
+2020-07-17 11:18:21.885+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.labels.id: 2020-07-17T11:18:20+0000 - 9.00 B
+2020-07-17 11:18:21.885+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db: 2020-07-17T11:06:23+0000 - 254.97 kB
+2020-07-17 11:18:21.885+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.arrays: 2020-07-17T11:06:23+0000 - 8.00 kB
+2020-07-17 11:18:21.885+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.arrays.id: 2020-07-17T11:18:21+0000 - 9.00 B
+2020-07-17 11:18:21.885+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.id: 2020-07-17T11:18:21+0000 - 9.00 B
+2020-07-17 11:18:21.885+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index: 2020-07-17T11:06:23+0000 - 8.00 kB
+2020-07-17 11:18:21.885+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.id: 2020-07-17T11:18:21+0000 - 9.00 B
+2020-07-17 11:18:21.886+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.keys: 2020-07-17T11:06:23+0000 - 8.00 kB
+2020-07-17 11:18:21.886+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.keys.id: 2020-07-17T11:18:20+0000 - 9.00 B
+2020-07-17 11:18:21.886+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.strings: 2020-07-17T11:06:23+0000 - 24.00 kB
+2020-07-17 11:18:21.886+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.strings.id: 2020-07-17T11:18:21+0000 - 9.00 B
+2020-07-17 11:18:21.886+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipgroupstore.db: 2020-07-17T11:06:23+0000 - 8.00 kB
+2020-07-17 11:18:21.886+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipgroupstore.db.id: 2020-07-17T11:18:21+0000 - 9.00 B
+2020-07-17 11:18:21.887+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipstore.db: 2020-07-17T11:06:23+0000 - 334.69 kB
+2020-07-17 11:18:21.887+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipstore.db.id: 2020-07-17T11:18:21+0000 - 9.00 B
+2020-07-17 11:18:21.887+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db: 2020-07-17T11:06:23+0000 - 8.00 kB
+2020-07-17 11:18:21.887+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.id: 2020-07-17T11:18:21+0000 - 9.00 B
+2020-07-17 11:18:21.887+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.names: 2020-07-17T11:06:23+0000 - 8.00 kB
+2020-07-17 11:18:21.887+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.names.id: 2020-07-17T11:18:21+0000 - 9.00 B
+2020-07-17 11:18:21.887+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.schemastore.db: 2020-07-17T11:06:23+0000 - 8.00 kB
+2020-07-17 11:18:21.887+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.schemastore.db.id: 2020-07-17T11:18:21+0000 - 9.00 B
+2020-07-17 11:18:21.888+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.transaction.db.0: 2020-07-17T11:06:23+0000 - 5.24 MB
+2020-07-17 11:18:21.888+0000 INFO [o.n.i.d.DiagnosticsManager]   schema:
+2020-07-17 11:18:21.888+0000 INFO [o.n.i.d.DiagnosticsManager]     index:
+2020-07-17 11:18:21.888+0000 INFO [o.n.i.d.DiagnosticsManager]       native-btree-1.0:
+2020-07-17 11:18:21.888+0000 INFO [o.n.i.d.DiagnosticsManager]         1:
+2020-07-17 11:18:21.888+0000 INFO [o.n.i.d.DiagnosticsManager]           index-1: 2020-07-17T11:18:20+0000 - 144.00 kB
+2020-07-17 11:18:21.888+0000 INFO [o.n.i.d.DiagnosticsManager]         - Total: 2020-07-17T11:06:23+0000 - 144.00 kB
+2020-07-17 11:18:21.888+0000 INFO [o.n.i.d.DiagnosticsManager]       - Total: 2020-07-17T11:06:23+0000 - 144.00 kB
+2020-07-17 11:18:21.889+0000 INFO [o.n.i.d.DiagnosticsManager]     - Total: 2020-07-17T11:06:23+0000 - 144.00 kB
+2020-07-17 11:18:21.889+0000 INFO [o.n.i.d.DiagnosticsManager]   - Total: 2020-07-17T11:06:23+0000 - 144.00 kB
+2020-07-17 11:18:21.889+0000 INFO [o.n.i.d.DiagnosticsManager] Storage summary: 
+2020-07-17 11:18:21.889+0000 INFO [o.n.i.d.DiagnosticsManager]   Total size of store: 6.13 MB
+2020-07-17 11:18:21.889+0000 INFO [o.n.i.d.DiagnosticsManager]   Total size of mapped files: 909.65 kB
+2020-07-17 11:18:21.889+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2020-07-17 11:18:21.889+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Fulfilling of requirement 'Database available' makes database graph.db available.
+2020-07-17 11:18:21.890+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Database graph.db is ready.
+2020-07-17 11:18:22.266+0000 INFO [o.n.k.i.DatabaseHealth] Database health set to OK
+2020-07-17 11:18:22.334+0000 WARN [o.n.k.i.p.Procedures] Failed to load `apoc.util.s3.S3URLConnection` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/amazonaws/ClientConfiguration
+2020-07-17 11:18:22.334+0000 WARN [o.n.k.i.p.Procedures] Failed to load `apoc.util.s3.S3Aws` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/amazonaws/auth/AWSCredentials
+2020-07-17 11:18:22.335+0000 WARN [o.n.k.i.p.Procedures] Failed to load `apoc.util.s3.S3Aws$1` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/amazonaws/services/s3/model/S3ObjectInputStream
+2020-07-17 11:18:22.343+0000 WARN [o.n.k.i.p.Procedures] Failed to load `apoc.util.hdfs.HDFSUtils$1` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/apache/hadoop/fs/FSDataInputStream
+2020-07-17 11:18:22.344+0000 WARN [o.n.k.i.p.Procedures] Failed to load `apoc.util.hdfs.HDFSUtils` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/apache/hadoop/fs/FSDataOutputStream
+2020-07-17 11:18:22.480+0000 WARN [o.n.k.i.p.Procedures] Failed to load `apoc.mongodb.MongoDBColl` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/bson/conversions/Bson
+2020-07-17 11:18:22.569+0000 WARN [o.n.k.i.p.Procedures] Failed to load `apoc.load.LoadXls` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/apache/poi/ss/usermodel/Cell
+2020-07-17 11:18:22.682+0000 WARN [o.n.k.i.p.Procedures] Failed to load `apoc.export.xls.ExportXls` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/apache/poi/ss/usermodel/Row
+2020-07-17 11:18:22.738+0000 WARN [o.n.k.i.p.Procedures] Failed to load `apoc.data.email.ExtractEmail` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: javax/mail/internet/AddressException
+2020-07-17 11:18:22.783+0000 WARN [o.n.k.i.p.Procedures] Failed to load `apoc.couchbase.CouchbaseManager` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/couchbase/client/java/env/CouchbaseEnvironment
+2020-07-17 11:18:22.784+0000 WARN [o.n.k.i.p.Procedures] Failed to load `apoc.couchbase.CouchbaseConnection` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/couchbase/client/java/Cluster
+2020-07-17 11:18:22.786+0000 WARN [o.n.k.i.p.Procedures] Failed to load `apoc.couchbase.document.CouchbaseUtils` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/couchbase/client/core/message/kv/MutationToken
+2020-07-17 11:18:22.878+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.jayway.jsonpath.spi.json.GsonJsonProvider` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/google/gson/JsonElement
+2020-07-17 11:18:22.879+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.jayway.jsonpath.spi.json.JsonOrgJsonProvider` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/json/JSONException
+2020-07-17 11:18:22.886+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.jayway.jsonpath.spi.mapper.GsonMappingProvider$1` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/google/gson/Gson
+2020-07-17 11:18:22.887+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.jayway.jsonpath.spi.mapper.GsonMappingProvider$2` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/google/gson/Gson
+2020-07-17 11:18:23.091+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ConscryptAlpnSslEngine` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/conscrypt/BufferAllocator
+2020-07-17 11:18:23.092+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslServerContext$TrustManagerVerifyCallback` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/neo4j/driver/internal/shaded/io/netty/internal/tcnative/CertificateVerifier
+2020-07-17 11:18:23.102+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslClientContext$ExtendedTrustManagerVerifyCallback` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/neo4j/driver/internal/shaded/io/netty/internal/tcnative/CertificateVerifier
+2020-07-17 11:18:23.103+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.JettyNpnSslEngine` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/eclipse/jetty/npn/NextProtoNego$Provider
+2020-07-17 11:18:23.103+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.JettyAlpnSslEngine$ClientEngine$1` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/eclipse/jetty/alpn/ALPN$ClientProvider
+2020-07-17 11:18:23.105+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.JettyAlpnSslEngine$ClientEngine` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/eclipse/jetty/alpn/ALPN$Provider
+2020-07-17 11:18:23.106+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.OpenSslKeyMaterialManager` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/neo4j/driver/internal/shaded/io/netty/internal/tcnative/CertificateRequestedCallback$KeyMaterial
+2020-07-17 11:18:23.108+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.JettyAlpnSslEngine$ServerEngine` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/eclipse/jetty/alpn/ALPN$Provider
+2020-07-17 11:18:23.108+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslClientContext$OpenSslCertificateRequestedCallback` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/neo4j/driver/internal/shaded/io/netty/internal/tcnative/CertificateRequestedCallback
+2020-07-17 11:18:23.122+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ConscryptAlpnSslEngine$ClientEngine$1` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/conscrypt/HandshakeListener
+2020-07-17 11:18:23.123+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslClientContext$TrustManagerVerifyCallback` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/neo4j/driver/internal/shaded/io/netty/internal/tcnative/CertificateVerifier
+2020-07-17 11:18:23.124+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslServerContext` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/neo4j/driver/internal/shaded/io/netty/internal/tcnative/CertificateVerifier
+2020-07-17 11:18:23.127+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.JettyNpnSslEngine$1` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/eclipse/jetty/npn/NextProtoNego$ServerProvider
+2020-07-17 11:18:23.130+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ConscryptAlpnSslEngine$ServerEngine$1` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/conscrypt/HandshakeListener
+2020-07-17 11:18:23.136+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.JettyNpnSslEngine$2` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/eclipse/jetty/npn/NextProtoNego$ClientProvider
+2020-07-17 11:18:23.139+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ConscryptAlpnSslEngine$BufferAllocatorAdapter` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/conscrypt/BufferAllocator
+2020-07-17 11:18:23.141+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ConscryptAlpnSslEngine$ClientEngine` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/conscrypt/BufferAllocator
+2020-07-17 11:18:23.154+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslServerContext$OpenSslSniHostnameMatcher` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/neo4j/driver/internal/shaded/io/netty/internal/tcnative/SniHostNameMatcher
+2020-07-17 11:18:23.156+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslServerContext$ExtendedTrustManagerVerifyCallback` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/neo4j/driver/internal/shaded/io/netty/internal/tcnative/CertificateVerifier
+2020-07-17 11:18:23.156+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ConscryptAlpnSslEngine$ServerEngine` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/conscrypt/BufferAllocator
+2020-07-17 11:18:23.163+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslClientContext` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/neo4j/driver/internal/shaded/io/netty/internal/tcnative/CertificateRequestedCallback
+2020-07-17 11:18:23.165+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ConscryptAlpnSslEngine$BufferAdapter` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/conscrypt/AllocatedBuffer
+2020-07-17 11:18:23.171+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslContext$AbstractCertificateVerifier` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/neo4j/driver/internal/shaded/io/netty/internal/tcnative/CertificateVerifier
+2020-07-17 11:18:23.179+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.ssl.JettyAlpnSslEngine$ServerEngine$1` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/eclipse/jetty/alpn/ALPN$ServerProvider
+2020-07-17 11:18:23.257+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.util.internal.logging.Log4JLogger` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/apache/log4j/Priority
+2020-07-17 11:18:23.335+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.util.internal.logging.Log4J2Logger` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/apache/logging/log4j/spi/ExtendedLoggerWrapper
+2020-07-17 11:18:23.524+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.MarshallerProvider` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/Marshaller
+2020-07-17 11:18:23.530+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.compression.Lz4FrameDecoder` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: net/jpountz/lz4/LZ4Exception
+2020-07-17 11:18:23.533+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.compression.Lz4FrameEncoder` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: net/jpountz/lz4/LZ4Exception
+2020-07-17 11:18:23.543+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.MarshallingEncoder` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/ByteOutput
+2020-07-17 11:18:23.543+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.protobuf.ProtobufEncoderNano` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/google/protobuf/nano/MessageNano
+2020-07-17 11:18:23.544+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.CompatibleMarshallingEncoder` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/ByteOutput
+2020-07-17 11:18:23.544+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.UnmarshallerProvider` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/Unmarshaller
+2020-07-17 11:18:23.545+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.ContextBoundUnmarshallerProvider` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/Unmarshaller
+2020-07-17 11:18:23.545+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.DefaultUnmarshallerProvider` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/Unmarshaller
+2020-07-17 11:18:23.545+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.ThreadLocalUnmarshallerProvider` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/Unmarshaller
+2020-07-17 11:18:23.560+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.compression.ZlibUtil` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/jcraft/jzlib/Inflater
+2020-07-17 11:18:23.564+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.LimitingByteInput` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/ByteInput
+2020-07-17 11:18:23.564+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.MarshallingDecoder` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/ByteInput
+2020-07-17 11:18:23.565+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.ChannelBufferByteInput` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/ByteInput
+2020-07-17 11:18:23.580+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.protobuf.ProtobufDecoder` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/google/protobuf/ExtensionRegistryLite
+2020-07-17 11:18:23.581+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.ChannelBufferByteOutput` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/ByteOutput
+2020-07-17 11:18:23.581+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.protobuf.ProtobufEncoder` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/google/protobuf/MessageLiteOrBuilder
+2020-07-17 11:18:23.582+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.CompatibleMarshallingDecoder` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/ByteInput
+2020-07-17 11:18:23.583+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.ThreadLocalMarshallerProvider` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/Marshaller
+2020-07-17 11:18:23.583+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.driver.internal.shaded.io.netty.handler.codec.marshalling.DefaultMarshallerProvider` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/jboss/marshalling/Marshaller
+2020-07-17 11:18:23.639+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.novell.ldap.DsmlConnection` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/apache/commons/httpclient/HttpException
+2020-07-17 11:18:23.708+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.novell.ldap.LDAPSecureSocketFactory` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/novell/service/security/net/SecureSocket
+2020-07-17 11:18:23.725+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.novell.ldap.spml.NoAuthImpl` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/openspml/client/SpmlClient
+2020-07-17 11:18:23.725+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.novell.ldap.spml.SPMLImpl` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/openspml/client/SpmlClient
+2020-07-17 11:18:23.726+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.novell.ldap.spml.SunIdm` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/openspml/client/SpmlClient
+2020-07-17 11:18:23.727+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.novell.ldap.SPMLConnection` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/openspml/util/SpmlException
+2020-07-17 11:18:23.739+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.novell.ldap.util.HttpRequestCallback` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/apache/commons/httpclient/methods/PostMethod
+2020-07-17 11:18:23.746+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.novell.sasl.client.NMASSaslClient$NmasLdapTransport` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/novell/security/nmas/transport/NMASTransport
+2020-07-17 11:18:23.747+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.novell.sasl.client.NMASSaslClient` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/novell/security/nmas/transport/MAFTransportException
+2020-07-17 11:18:24.326+0000 WARN [o.n.k.i.p.Procedures] Failed to load `schemacrawler.tools.integration.graph.GraphvizJavaExecutorUtility` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: guru/nidi/graphviz/engine/Format
+2020-07-17 11:18:24.331+0000 WARN [o.n.k.i.p.Procedures] Failed to load `schemacrawler.tools.integration.freemarker.FreeMarkerRenderer` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: freemarker/cache/TemplateLoader
+2020-07-17 11:18:24.334+0000 WARN [o.n.k.i.p.Procedures] Failed to load `schemacrawler.tools.integration.mustache.MustacheRenderer` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: com/github/mustachejava/MustacheFactory
+2020-07-17 11:18:24.335+0000 WARN [o.n.k.i.p.Procedures] Failed to load `schemacrawler.tools.integration.thymeleaf.ThymeleafRenderer` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/thymeleaf/templateresolver/AbstractConfigurableTemplateResolver
+2020-07-17 11:18:24.336+0000 WARN [o.n.k.i.p.Procedures] Failed to load `schemacrawler.tools.integration.velocity.VelocityRenderer` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/apache/velocity/exception/ResourceNotFoundException
+2020-07-17 11:18:25.571+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.apache.commons.logging.impl.AvalonLogger` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/apache/avalon/framework/logger/Logger
+2020-07-17 11:18:25.573+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.apache.commons.logging.impl.Log4JLogger` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/apache/log4j/Category
+2020-07-17 11:18:25.577+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.apache.commons.logging.impl.LogKitLogger` from plugin jar `/plugins/apoc-3.5.0.3-all.jar`: org/apache/log/Logger
+2020-07-17 11:18:27.337+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.sun.media.jai.mlib.MlibUtils` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/medialib/mlib/mediaLibImage
+2020-07-17 11:18:27.404+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.sun.media.jai.tilecodec.JPEGTileEncoder` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/image/codec/jpeg/JPEGEncodeParam
+2020-07-17 11:18:27.485+0000 WARN [o.n.k.i.p.Procedures] Failed to load `it.geosolutions.imageio.plugins.tiff.TIFFDecompressor` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/media/imageioimpl/common/BogusColorSpace
+2020-07-17 11:18:27.491+0000 WARN [o.n.k.i.p.Procedures] Failed to load `it.geosolutions.imageioimpl.plugins.tiff.I18N` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/media/imageioimpl/common/I18NImpl
+2020-07-17 11:18:28.004+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.gis.spatial.pipes.processing.KeyholeMarkupLanguage` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: org/geotools/xml/Configuration
+2020-07-17 11:18:28.494+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.sun.media.jai.mlib.MediaLibAccessor` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: [Lcom/sun/medialib/mlib/mediaLibImage;
+2020-07-17 11:18:28.567+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.jdom.xpath.JaxenXPath$NSContext` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: org/jaxen/SimpleNamespaceContext
+2020-07-17 11:18:28.568+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.jdom.xpath.JaxenXPath` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: org/jaxen/JaxenException
+2020-07-17 11:18:28.598+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.sun.media.jai.codecimpl.TIFFImage` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/image/codec/jpeg/JPEGDecodeParam
+2020-07-17 11:18:28.845+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.gis.spatial.process.SpatialProcess` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: org/geotools/process/factory/StaticMethodsProcessFactory
+2020-07-17 11:18:28.868+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.geotools.data.neo4j.StyledImageExporter` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: org/geotools/map/Layer
+2020-07-17 11:18:28.945+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.geotools.data.AbstractDataStoreTest` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: junit/framework/TestCase
+2020-07-17 11:18:29.070+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.geotools.util.logging.Log4JLoggerFactory` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: org/apache/log4j/Logger
+2020-07-17 11:18:29.110+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.sun.media.jai.opimage.IIPResolutionOpImage` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/image/codec/jpeg/JPEGDecodeParam
+2020-07-17 11:18:29.178+0000 WARN [o.n.k.i.p.Procedures] Failed to load `it.geosolutions.imageioimpl.plugins.tiff.TIFFYCbCrDecompressor` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/media/imageioimpl/common/BogusColorSpace
+2020-07-17 11:18:29.182+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.sun.media.jai.codecimpl.JPEGImageEncoder` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/image/codec/jpeg/JPEGEncodeParam
+2020-07-17 11:18:29.648+0000 WARN [o.n.k.i.p.Procedures] Failed to load `it.geosolutions.imageioimpl.plugins.tiff.TIFFLSBDecompressor` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/media/imageioimpl/common/BogusColorSpace
+2020-07-17 11:18:29.649+0000 WARN [o.n.k.i.p.Procedures] Failed to load `it.geosolutions.imageioimpl.plugins.tiff.TIFFOldJPEGDecompressor` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/media/imageioimpl/common/BogusColorSpace
+2020-07-17 11:18:29.801+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.spatial4j.core.io.GeoJSONReader` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: org/noggit/JSONParser
+2020-07-17 11:18:29.808+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.neo4j.gis.spatial.rtree.RTreeImageExporter` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: org/geotools/map/Layer
+2020-07-17 11:18:29.903+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.geotools.data.DataTestCase` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: junit/framework/TestCase
+2020-07-17 11:18:30.017+0000 WARN [o.n.k.i.p.Procedures] Failed to load `org.geotools.util.logging.Log4JLogger` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: org/apache/log4j/Priority
+2020-07-17 11:18:30.039+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.sun.media.jai.mlib.MlibMosaicOpImage` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/medialib/mlib/mediaLibImage
+2020-07-17 11:18:30.059+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.sun.media.jai.tilecodec.JPEGTileDecoder` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/image/codec/jpeg/JPEGDecodeParam
+2020-07-17 11:18:30.118+0000 WARN [o.n.k.i.p.Procedures] Failed to load `it.geosolutions.imageioimpl.plugins.tiff.TIFFJPEGDecompressor` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/media/imageioimpl/common/BogusColorSpace
+2020-07-17 11:18:30.118+0000 WARN [o.n.k.i.p.Procedures] Failed to load `it.geosolutions.imageioimpl.plugins.tiff.TIFFLZWDecompressor` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/media/imageioimpl/common/BogusColorSpace
+2020-07-17 11:18:30.119+0000 WARN [o.n.k.i.p.Procedures] Failed to load `it.geosolutions.imageioimpl.plugins.tiff.TIFFNullDecompressor` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/media/imageioimpl/common/BogusColorSpace
+2020-07-17 11:18:30.119+0000 WARN [o.n.k.i.p.Procedures] Failed to load `it.geosolutions.imageioimpl.plugins.tiff.TIFFPackBitsDecompressor` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/media/imageioimpl/common/BogusColorSpace
+2020-07-17 11:18:30.506+0000 WARN [o.n.k.i.p.Procedures] Failed to load `it.geosolutions.imageioimpl.plugins.tiff.EmptyImage` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/media/imageioimpl/common/SimpleRenderedImage
+2020-07-17 11:18:30.507+0000 WARN [o.n.k.i.p.Procedures] Failed to load `it.geosolutions.imageioimpl.plugins.tiff.TIFFCodecLibFaxDecompressor` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/media/imageioimpl/common/BogusColorSpace
+2020-07-17 11:18:30.508+0000 WARN [o.n.k.i.p.Procedures] Failed to load `it.geosolutions.imageioimpl.plugins.tiff.TIFFDeflateDecompressor` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/media/imageioimpl/common/BogusColorSpace
+2020-07-17 11:18:30.518+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.sun.media.jai.codecimpl.JPEGImage` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/image/codec/jpeg/ImageFormatException
+2020-07-17 11:18:30.595+0000 WARN [o.n.k.i.p.Procedures] Failed to load `com.spatial4j.core.io.jts.JtsGeoJSONReader` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: org/noggit/JSONParser
+2020-07-17 11:18:31.114+0000 WARN [o.n.k.i.p.Procedures] Failed to load `it.geosolutions.imageioimpl.plugins.tiff.TIFFFaxDecompressor` from plugin jar `/plugins/neo4j-spatial-0.26.2-neo4j-3.5.2-server-plugin.jar`: com/sun/media/imageioimpl/common/BogusColorSpace
+2020-07-17 11:18:32.050+0000 INFO [o.n.b.BoltServer] Bolt server loaded
+2020-07-17 11:18:32.186+0000 INFO [o.n.b.BoltServer] Bolt enabled on 0.0.0.0:7687.
+2020-07-17 11:18:33.700+0000 INFO [o.n.i.d.DiagnosticsManager] --- SERVER STARTED START ---
+2020-07-17 11:18:34.677+0000 INFO [o.n.i.d.DiagnosticsManager] --- SERVER STARTED END ---
+2020-07-17 11:28:17.962+0000 WARN [o.n.b.r.DefaultBoltConnection] The client is unauthorized due to authentication failure.
+2020-07-17 11:29:48.279+0000 INFO [o.n.c.i.CommunityCompilerFactory] Discarded stale query from the query cache after 235 seconds: Match(n)-[r]-(m) delete r,n
+2020-07-17 11:30:25.626+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 120 seconds: 
+CALL dbms.queryJmx("org.neo4j:instance=*,name=Kernel") yield attributes
+RETURN {name: 'Kernel', data: collect(attributes)} as result
+UNION ALL
+CALL dbms.queryJmx("org.neo4j:instance=*,name=Store file sizes") yield attributes
+RETURN {name: 'Store file sizes', data: collect(attributes)} as result
+UNION ALL
+CALL dbms.queryJmx("org.neo4j:instance=*,name=Configuration") yield attributes
+RETURN {name: 'Configuration', data: collect(attributes)} as result
+
+2020-07-17 11:30:25.628+0000 INFO [o.n.c.i.CommunityCompilerFactory] Discarded stale query from the query cache after 120 seconds: CALL dbms.queryJmx("org.neo4j:instance=*,name=Kernel") yield attributes
+RETURN {name: 'Kernel', data: collect(attributes)} as result
+UNION ALL
+CALL dbms.queryJmx("org.neo4j:instance=*,name=Store file sizes") yield attributes
+RETURN {name: 'Store file sizes', data: collect(attributes)} as result
+UNION ALL
+CALL dbms.queryJmx("org.neo4j:instance=*,name=Configuration") yield attributes
+RETURN {name: 'Configuration', data: collect(attributes)} as result
+
+2020-07-17 11:30:26.622+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 120 seconds: 
+CALL db.labels() YIELD label
+RETURN {name:'labels', data:COLLECT(label)[..1000]} as result
+UNION ALL
+CALL db.relationshipTypes() YIELD relationshipType
+RETURN {name:'relationshipTypes', data:COLLECT(relationshipType)[..1000]} as result
+UNION ALL
+CALL db.propertyKeys() YIELD propertyKey
+RETURN {name:'propertyKeys', data:COLLECT(propertyKey)[..1000]} as result
+UNION ALL
+CALL dbms.functions() YIELD name, signature, description
+RETURN {name:'functions', data: collect({name: name, signature: signature, description: description})} AS result
+UNION ALL
+CALL dbms.procedures() YIELD name, signature, description
+RETURN {name:'procedures', data:collect({name: name, signature: signature, description: description})} as result
+UNION ALL
+MATCH () RETURN { name:'nodes', data:count(*) } AS result
+UNION ALL
+MATCH ()-[]->() RETURN { name:'relationships', data: count(*)} AS result
+
+2020-07-17 11:30:26.624+0000 INFO [o.n.c.i.CommunityCompilerFactory] Discarded stale query from the query cache after 120 seconds: CALL db.labels() YIELD label
+RETURN {name:'labels', data:COLLECT(label)[..1000]} as result
+UNION ALL
+CALL db.relationshipTypes() YIELD relationshipType
+RETURN {name:'relationshipTypes', data:COLLECT(relationshipType)[..1000]} as result
+UNION ALL
+CALL db.propertyKeys() YIELD propertyKey
+RETURN {name:'propertyKeys', data:COLLECT(propertyKey)[..1000]} as result
+UNION ALL
+CALL dbms.functions() YIELD name, signature, description
+RETURN {name:'functions', data: collect({name: name, signature: signature, description: description})} AS result
+UNION ALL
+CALL dbms.procedures() YIELD name, signature, description
+RETURN {name:'procedures', data:collect({name: name, signature: signature, description: description})} as result
+UNION ALL
+MATCH () RETURN { name:'nodes', data:count(*) } AS result
+UNION ALL
+MATCH ()-[]->() RETURN { name:'relationships', data: count(*)} AS result
+
+2020-07-17 11:30:44.401+0000 INFO [o.n.k.i.p.Procedures] [node-importer] LOADING 1% Memory usage: 0 Bytes
+2020-07-17 11:30:44.422+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-44] LOADING 100% Memory usage: 45 KiB
+2020-07-17 11:30:44.428+0000 INFO [o.n.k.i.p.Procedures] Degree Centrality: overall memory usage: 45 KiB
+2020-07-17 11:30:49.615+0000 INFO [o.n.k.i.p.Procedures] [node-importer] LOADING 1%
+2020-07-17 11:30:49.624+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-67] LOADING 100%
+2020-07-17 11:30:49.628+0000 INFO [o.n.k.i.p.Procedures] [algo-1] BetweennessCentrality 0%
+2020-07-17 11:30:54.977+0000 INFO [o.n.k.i.p.Procedures] [node-importer] LOADING 1% Memory usage: 0 Bytes
+2020-07-17 11:30:54.981+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-54] LOADING 100% Memory usage: 45 KiB
+2020-07-17 11:30:54.985+0000 INFO [o.n.k.i.p.Procedures] [algo-3] ClosenessCentrality(MultiSource) 25%
+2020-07-17 11:30:59.085+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 147 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2020-07-17 11:30:59.086+0000 INFO [o.n.c.i.CommunityCompilerFactory] Discarded stale query from the query cache after 147 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2020-07-17 11:38:48.161+0000 INFO [o.n.k.i.p.Procedures] [node-importer] LOADING 1%
+2020-07-17 11:38:48.165+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-43] LOADING 100%
+2020-07-17 11:38:48.166+0000 INFO [o.n.k.i.p.Procedures] [algo-2] BetweennessCentrality 0%
+2020-07-17 11:39:39.343+0000 INFO [o.n.k.i.p.Procedures] [node-importer] LOADING 1%
+2020-07-17 11:39:39.347+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-114] LOADING 100%
+2020-07-17 11:39:39.348+0000 INFO [o.n.k.i.p.Procedures] [algo-1] BetweennessCentrality 0%
+2020-07-17 11:39:44.841+0000 INFO [o.n.k.i.p.Procedures] [node-importer] LOADING 1%
+2020-07-17 11:39:44.844+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-43] LOADING 100%
+2020-07-17 11:39:44.844+0000 INFO [o.n.k.i.p.Procedures] [algo-2] BetweennessCentrality 0%
+2020-07-17 11:41:13.887+0000 INFO [o.n.k.i.p.Procedures] [node-importer] LOADING 1% Memory usage: 0 Bytes
+2020-07-17 11:41:13.890+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-114] LOADING 100% Memory usage: 45 KiB
+2020-07-17 11:41:13.891+0000 INFO [o.n.k.i.p.Procedures] [algo-2] ClosenessCentrality(MultiSource) 25%
+2020-07-17 11:42:09.965+0000 INFO [o.n.k.i.p.Procedures] [node-importer] LOADING 1%
+2020-07-17 11:42:09.967+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-54] LOADING 100%
+2020-07-17 11:42:09.968+0000 INFO [o.n.k.i.p.Procedures] [algo-3] BetweennessCentrality(parallel) 0%
+2020-07-17 11:42:09.983+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-54] EXPORT 0%
+2020-07-17 11:43:40.435+0000 INFO [o.n.k.i.p.Procedures] [node-importer] LOADING 1% Memory usage: 0 Bytes
+2020-07-17 11:43:40.437+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-65] LOADING 100% Memory usage: 41 KiB
+2020-07-17 11:43:40.470+0000 INFO [o.n.k.i.p.Procedures] PageRank: overall memory usage: 41 KiB
+2020-07-17 11:43:54.262+0000 INFO [o.n.k.i.p.Procedures] [node-importer] LOADING 1%
+2020-07-17 11:43:54.265+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-137] LOADING 100%
+2020-07-17 11:43:54.266+0000 INFO [o.n.k.i.p.Procedures] [algo-4] BetweennessCentrality(parallel) 0%
+2020-07-17 11:43:54.272+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-137] EXPORT 0%
+2020-07-17 11:45:09.018+0000 INFO [o.n.k.i.p.Procedures] [node-importer] LOADING 1% Memory usage: 0 Bytes
+2020-07-17 11:45:09.020+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-137] LOADING 100% Memory usage: 45 KiB
+2020-07-17 11:45:09.044+0000 INFO [o.n.k.i.p.Procedures] PageRank: overall memory usage: 45 KiB
+2020-07-17 11:45:09.045+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-137] EXPORT 0%
+2020-07-17 11:45:53.626+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-114] LabelPropagation 62%
+2020-07-17 11:45:53.633+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-114] EXPORT 0%
+2020-07-17 11:46:02.222+0000 INFO [o.n.k.i.p.Procedures] PageRank: overall memory usage: 24 MiB
+2020-07-17 11:46:02.222+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-43] EXPORT 0%
+2020-07-17 11:46:09.573+0000 INFO [o.n.k.i.p.Procedures] PageRank: overall memory usage: 24 MiB
+2020-07-17 11:46:09.574+0000 INFO [o.n.k.i.p.Procedures] [qtp1123375379-118] EXPORT 1%
+2020-07-17 11:47:01.919+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by "Scheduled checkpoint for time threshold" @ txId: 54 checkpoint started...
+2020-07-17 11:47:01.976+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 54 to [/data/databases/graph.db/neostore.counts.db.b], from [/data/databases/graph.db/neostore.counts.db.a].
+2020-07-17 11:47:02.156+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by "Scheduled checkpoint for time threshold" @ txId: 54 checkpoint completed in 237ms
+2020-07-17 11:47:02.165+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2020-07-17 11:47:19.289+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=116, gcTime=198, gcCount=1}
+2020-07-17 12:26:23.627+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Database graph.db is unavailable.
+2020-07-17 12:26:23.643+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Shutdown started
+2020-07-17 12:26:23.647+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Shutting down 'graph.db' database.
+2020-07-17 12:26:23.647+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Shutdown started
+2020-07-17 12:26:23.650+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by "Database shutdown" @ txId: 54 checkpoint started...
+2020-07-17 12:26:23.719+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by "Database shutdown" @ txId: 54 checkpoint completed in 67ms
+2020-07-17 12:26:23.719+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2020-07-17 12:26:24.163+0000 INFO [o.n.i.d.DiagnosticsManager] --- STOPPING diagnostics START ---
+2020-07-17 12:26:24.163+0000 INFO [o.n.i.d.DiagnosticsManager] --- STOPPING diagnostics END ---
